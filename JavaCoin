@@ -1,0 +1,48 @@
+package javaapplication1;
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        //long code
+        int x = Integer.parseInt(args[0]);
+        int cent100 = 0;
+        int cent50 = 0;
+        int cent20 = 0;
+        int cent10 = 0;
+        int remainder = 0;
+        double value = x / 100.00;
+        
+        cent100 = x / 100;
+        remainder = x % 100;
+        
+        cent50 = remainder / 50;
+        remainder = remainder % 50;
+        
+        cent20 = remainder / 20;
+        remainder = remainder % 20;
+        
+        cent10 = remainder / 10;
+        remainder = remainder % 10;
+        
+       
+        System.out.println("Value Of Input Is:" + " " + "$" +value);
+        System.out.println("$1.00=" + " " + cent100);
+        System.out.println("$0.50=" + " " + cent50);
+        System.out.println("$0.20=" + " " + cent20);
+        System.out.println("$0.10=" + " " + cent10); 
+        
+        
+        //Short Code
+        int cent[]={100,50,20,10};
+        int results[] = new int[4];
+        int i = 0;
+        
+        for (i=0;i<4;i++){
+             results[i] = x / cent[i];
+             x = x % cent[i];
+        }
+        
+        for (i=0;i<4;i++){
+             System.out.println(cent[i] + " cent =" + " " + results[i]);
+        }
+    }
+    
+}
